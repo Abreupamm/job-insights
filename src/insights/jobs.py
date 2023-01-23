@@ -5,26 +5,11 @@ import csv
 
 @lru_cache
 def read(path: str) -> List[Dict]:
-    list = []
-    with open(path, node='r') as file:
-        archive = csv.reader(file, delimiter=',')
-        for line in archive:
-            print(line)
-    
+    with open(path) as file:
+        archive = csv.DictReader(file, delimiter=',', quotechar='"')
+            
+        return list(archive)
 
-    """Reads a file from a given path and returns its contents
-
-    Parameters
-    ----------
-    path : str
-        Full path to file
-
-    Returns
-    -------
-    list
-        List of rows as dicts
-    """
-    raise NotImplementedError
 
 
 def get_unique_job_types(path: str) -> List[str]:
