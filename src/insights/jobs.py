@@ -25,5 +25,5 @@ def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
     for job in jobs:
         if job['job_type'] == job_type:
             new_jobs_list.append(job)
-        
+
     return new_jobs_list
