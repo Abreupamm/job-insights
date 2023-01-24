@@ -11,7 +11,7 @@ def get_max_salary(path: str) -> int:
             if value > max_salary:
                 max_salary = value
     return max_salary
-            
+
 
 def get_min_salary(path: str) -> int:
     archive = read(path)
