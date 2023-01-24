@@ -14,7 +14,7 @@ def get_unique_job_types(path: str) -> List[str]:
     archive = read(path)
     unique_list = list()
     for item in archive:
-        if item is not None:
+        if item['job_type'] != '':
             unique_item = item['job_type']
             unique_list.append(unique_item)
     return list(set(unique_list))
